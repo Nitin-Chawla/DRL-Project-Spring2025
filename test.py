@@ -1,9 +1,9 @@
 import gymnasium as gym
 import PyFlyt.gym_envs
 import numpy as np
-from stable_baselines3 import PPO
 import os
 import torch
+from stable_baselines3 import PPO
 from PPO_DRL import PPO
 from RND_DRL import PPO_RND
 from RND_DRL import RunningNormalizer
@@ -32,11 +32,11 @@ NUM_TEST_EPISODES = 1
 # Load the trained model
 # model = PPO.load("./ppo_pyflyt_best_model/best_model")
 
-# model = torch.load("./Saved_Models_RND_DRL/best_model_ppo.pt", weights_only=False)
+model = torch.load("./Saved_Models_RND_DRL/best_model_ppo.pt", weights_only=False)
 
-model = PPO(config)
-model.load_state_dict(torch.load("./Saved_Models_PPO_DRL/best_model_ppo.pt"))
-model.eval()
+# model = PPO(config)
+# model.load_state_dict(torch.load("./Saved_Models_PPO_DRL/best_model_ppo.pt"))
+# model.eval()
 
 def test_model(model, env, num_episodes=NUM_TEST_EPISODES, render=False):
     total_rewards = []  #
