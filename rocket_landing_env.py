@@ -33,7 +33,7 @@ class RocketLandingEnv(RocketBaseEnv):
     def __init__(
             self,
             sparse_reward: bool = False,
-            ceiling: float = 100.0,
+            ceiling: float = 500.0,
             max_displacement: float = 200.0,
             max_duration_seconds: float = 30.0,
             angle_representation: Literal["euler", "quaternion"] = "quaternion",

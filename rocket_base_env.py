@@ -13,7 +13,7 @@ from PyFlyt.core.aviary import Aviary
 from PyFlyt.core.utils.compile_helpers import check_numpy
 import pybullet
 from stable_baselines3.common.logger import Logger
-from wind_test import simple_wind
+# from wind_test import simple_wind
 
 
 class RocketBaseEnv(gymnasium.Env):

@@ -77,7 +77,7 @@ def test_model(model, env, num_episodes=NUM_TEST_EPISODES, render=False):
     plt.ylabel("Vertical Velocity")
     plt.plot(steps_list, velocity_list)
     plt.show()
-    plt.savefig("my_plot.png")
+    # plt.savefig("my_plot.png")
 
 
     return total_rewards, avg_reward
@@ -85,7 +85,7 @@ def test_model(model, env, num_episodes=NUM_TEST_EPISODES, render=False):
 
 test_rewards, avg_test_reward = test_model(model, env, num_episodes=NUM_TEST_EPISODES)
 
-np.save("test_rewards.npy", test_rewards)  # Save individual episode rewards
-np.save("avg_test_reward.npy", avg_test_reward)  # Save the average test reward
+# np.save("test_rewards.npy", test_rewards)  # Save individual episode rewards
+# np.save("avg_test_reward.npy", avg_test_reward)  # Save the average test reward
 
 print(f"Test Results - Average Reward: {avg_test_reward}")
